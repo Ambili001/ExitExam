@@ -1,0 +1,16 @@
+const mongoose = require('mongoose');
+//connection to MongoDB using mongoose
+const dbUrl = 'mongodb+srv://Ambili97:thiruvonum001@cluster0.pkmrzlb.mongodb.net/ExitExam?retryWrites=true&w=majority ';
+// const dbUrl ='mongodb+srv://aparnasj:aparnasj15@cluster0.fpnhbfk.mongodb.net/mainproject?retryWrites=true&w=majority';
+const connectionParams = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+};
+
+mongoose.connect(dbUrl, connectionParams)
+    .then(() => {
+        console.log("Project Database connected");
+    })
+    .catch(() => {
+        console.log("error");
+    })
